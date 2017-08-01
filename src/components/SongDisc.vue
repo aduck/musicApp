@@ -6,7 +6,7 @@
       <div class="items clearfix">
         <div class="item" v-for="item in hotplaylist">
           <router-link :to="`/songlist/${item.id}`">
-            <div class="thumb"><img :src="item.coverUrl" :alt="item.title"></div>
+            <div class="thumb"><img v-lazy="item.coverUrl" :alt="item.title"></div>
             <div class="text">
               <div class="title">{{item.title}}</div>
               <div class="author"><i class="fa fa-user-o" aria-hidden="true"></i> {{item.username}}</div>

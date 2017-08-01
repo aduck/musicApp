@@ -18,7 +18,7 @@
       <div class="comment" v-for="item in comments">
         <div class="userInfo">
           <div class="ava">
-            <img :src="item.user.avatarUrl" alt="">
+            <img v-lazy="item.user.avatarUrl" :alt="item.user.nickname">
           </div>
           <div class="nickname">{{item.user.nickname}}</div>
         </div>

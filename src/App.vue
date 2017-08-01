@@ -19,6 +19,11 @@
     components:{
       'nav-bar':NavBar,
       'tip':Tip
+    },
+    watch:{
+      '$route' (to,from) {
+        document.documentElement.scrollTop = document.body.scrollTop = '0'
+      }
     }
   }
 </script>
